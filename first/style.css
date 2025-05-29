@@ -41,6 +41,9 @@ body {
 #button {
   padding: 10px 15px;
   color: #fff;
-  background-color: rgb(50, 50, 199);
+  background-color: steelblue;
   border-radius: 2px;
+}
+#button.stop-color {
+  background-color: tomato;
 }
