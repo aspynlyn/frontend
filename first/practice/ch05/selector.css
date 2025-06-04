@@ -1,0 +1,15 @@
+span {
+  color: plum;
+}
+span {
+  color: steelblue;
+}
+div {
+  color: aqua;
+}
+div.blue {
+  color: red;
+}
+.blue {
+  color: slateblue;
+}
