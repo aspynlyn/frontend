@@ -1,0 +1,10 @@
+ul {
+  background-color: cadetblue;
+}
+ul > li {
+  display: inline-block;
+  background-color: #ebebeb;
+}
+ul li:not(:last-child) {
+  margin-right: 2em;
+}

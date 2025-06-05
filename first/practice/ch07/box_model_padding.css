@@ -1,0 +1,13 @@
+span {
+  background-color: steelblue;
+}
+.container {
+  background-color: #fff;
+}
+.container div {
+  background-color: slategray;
+}
+span,
+.container div {
+  padding: 20px;
+}

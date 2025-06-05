@@ -1,0 +1,24 @@
+span {
+  background-color: steelblue;
+}
+.container {
+  background-color: #fff;
+}
+.container div {
+  background-color: slategray;
+  display: inline;
+}
+.container span:first-child {
+  color: red;
+}
+.container :nth-child(2) {
+  color: blue;
+}
+.container div:first-of-type {
+  color: blueviolet;
+}
+.inline_block {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
