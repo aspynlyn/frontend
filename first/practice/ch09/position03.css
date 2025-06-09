@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  color: white;
+  background-color: gray;
+}
+header h1{
+  font-size: 1.5em;
+}
+main{
+  position: relative;
+  
+}
