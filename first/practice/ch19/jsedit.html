@@ -11,9 +11,11 @@
     <section class="plant">
       <h2 id="vegetable_title">채소</h2>
       <ul>
-        <li>당근</li>
+        <li class="organic">당근</li>
         <li>오이</li>
-        <li class="soldout">양파</li>
+        <li>상추</li>
+        <li>가지</li>
+        <li class="hidden kkk vvv">양파</li>
       </ul>
     </section>
     <section id="sweets" class="plant">
@@ -34,10 +36,29 @@
     </section>
     <script>
       const $vegetableTitle = document.querySelector('#vegetable_title');
-      
+
       // $vegetableTitle.textContent = 'Vegetable';
-      $vegetableTitle.innerText = 'Vegetable';
+      // $vegetableTitle.innerText = 'Vegetable';
       // $vegetableTitle.innerHTML = 'Vegetable';
+      $vegetableTitle.innerHTML += 'vagetable';
+
+      const $onion = document.querySelector('section ul').lastElementChild;
+      console.log('$onion.classList:', $onion.classList);
+      console.log(Array.isArray($onion.classList));
+      console.log(Array.isArray([]));
+
+      $onion.classList.remove('hidden');
+      $onion.classList.add('organic');
+      // $onion.className = 'kkk vvv organic';
+
+      $onion.style.fontSize = '2em';
+      // $onion.style['font-size'] = '2em'
+
+      $onion.style.backgroundColor = 'slategray';
+      // $onion.style['background-color'] = 'slategray';
+
+      $onion.style.listStyleType = 'none';
+      // $onion.style['list-style-type'] = 'none';
 
       console.log($vegetableTitle);
     </script>

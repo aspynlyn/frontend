@@ -25,3 +25,10 @@ ul {
   padding: 3px;
   color: #fff;
 }
+
+.hidden{
+  display: none;
+}
+.organic::after{
+  content: ' (유기농) ';
+}
