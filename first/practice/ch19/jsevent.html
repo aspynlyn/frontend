@@ -71,9 +71,14 @@
         e.target.setAttribute('placeHolder', '');
       });
       const $view = document.querySelector('#view');
-      $myInput.addEventListener('keyup', (e) => {
+      $myInput.addEventListener('keypress', (e) => {
         $view.textContent = e.target.value;
-      });
+      }); // 입력할 때 바로 이벤트가 발생함
+
+      // const $view = document.querySelector('#view');
+      // $myInput.addEventListener('change', (e) => {
+      //   $view.textContent = e.target.value;
+      // });   change는 변화가 생겼을때만 이벤트가 발생함
     </script>
   </body>
 </html>
