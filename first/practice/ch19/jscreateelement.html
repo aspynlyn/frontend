@@ -36,25 +36,16 @@
     </section>
     <input type="range" min="0" max="100" value="50" />
     <script>
-      const $vegetableTitle = document.querySelector('#vegetable_title');
-      $vegetableTitle.remove();
-      console.log('$vegetableTitle:', $vegetableTitle);
+      const $fruit_ul = document.querySelector('#sweets > ul');
+      const fruits = ['용과', '블루베리', '리치', '참외', '체리'];
+      for (const item of fruits) {
+        const ele_li = document.createElement('li');
+        ele_li.textContent = item;
+        $fruit_ul.append(ele_li);
+        // 객체의 주소값 뿐만 아니라 문자열도 넣을 수 있음 `<li>${수박}</li>` 단 text개념이라 태그는 적용 X
+        $fruit_ul.appendChild(ele_li); 
+        // Child는 객체의 주소값만 넣을 수 있음
 
-      const $selfH2Tag = document.createElement('h2');
-      $selfH2Tag.textContent = '내가 만든 h2';
-
-      const $secondSection = document.querySelector('#sweets');
-      $secondSection.prepend($vegetableTitle);
-      $secondSection.append($selfH2Tag);
-
-      $secondSection.children[0].remove();
-
-      const $meat = document.querySelectorAll('#meat > ul > li');
-      for (i = 0; i < $meat.length; i++) {
-        $meat[i].remove();
-      }
-      for (const item of $meat) {
-        item.remove();
       }
     </script>
   </body>
