@@ -43,8 +43,12 @@ for (let i = 0; i < aboutCards.length; i++) {
   const $div = document.createElement('div');
   $div.classList.add('about__card');
   $div.innerHTML = `<img class="about__icon" src="${aboutCards[i].img}" alt="">
-                    <h2 class="about__title _${i+1}">${aboutCards[i].title}</h2>
-                    <p class="about__text">${aboutCards[i].descs[0]}<br>${aboutCards[i].descs[1]}</p>`;
+                    <h2 class="about__title _${i + 1}">${
+    aboutCards[i].title
+  }</h2>
+                    <p class="about__text">${aboutCards[i].descs[0]}<br>${
+    aboutCards[i].descs[1]
+  }</p>`;
   $aboutDiv.appendChild($div);
 }
 
@@ -79,8 +83,49 @@ $currLiList.forEach((item, idx) => {
     'mouseenter',
     () => ($currProgBar.style.width = `${200 * idx}px`)
   );
-  item.addEventListener(
-    'mouseleave',
-    () => ($currProgBar.style.width = 0)
-  );
+  item.addEventListener('mouseleave', () => ($currProgBar.style.width = 0));
 });
+
+const $contactTabs = document.querySelectorAll('#ct_1, #ct_2');
+console.log($contactTabs);
+
+const $contactSlideCon = document.querySelector('#contact .contact__slide-con');
+
+$contactTabs.forEach((item, idx) => {
+  const marginLeft = [0, '-100vw'][idx];
+
+  // let marginLeft2;
+  // if(idx === 0){
+  //   marginLeft2 == 0;
+  // }else if(idx === 1){
+  //   marginLeft2 = '-100vw';
+  // }
+
+  item.addEventListener('click', () => {
+    $contactSlideCon.style.marginLeft = marginLeft;
+  });
+});
+
+const $menuBtn = document.querySelector(
+  'header.header button.header__menu-btn'
+);
+const $headerNav = document.querySelector('header.header nav.header__nav');
+
+// $menuBtn.addEventListener('click', () => {
+//   $menuBtn.classList.toggle('on');
+// });
+// $headerNav.addEventListener('click', () => {
+//   $headerNav.classList.toggle('active');
+// });
+$menuBtn.addEventListener('click', (e) => {
+  e.target.classList.toggle('on');
+  $headerNav.classList.toggle('active');
+
+  e.stopPropagation(); // 버블링 중지
+});
+
+const $body = document.querySelector('body');
+$body.addEventListener('click', () => {
+  $menuBtn.classList.remove('on');
+  $headerNav.classList.remove('active');
+})
